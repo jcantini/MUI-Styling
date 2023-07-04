@@ -1,18 +1,17 @@
-import {  TextField } from "@mui/material";
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { minWidth }  from '../ContactForm';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 export const FormDesktopDatePicker = (
     props: {
-        value: string | undefined
+        value: string | undefined,
         onChange: (value: string | null | undefined) => void
     }
 ) => {
     return (  
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <LocalizationProvider dateAdapter={ AdapterDayjs}>
             <DesktopDatePicker 
                 {...props}
                 label='Fecha'
@@ -24,7 +23,7 @@ export const FormDesktopDatePicker = (
                 sx={{ minWidth: minWidth }}
             /> 
         </LocalizationProvider>
-    )
+      )
 }
 
 /*

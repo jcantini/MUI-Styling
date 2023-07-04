@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, Routes, Route } from 'react-router-dom'
 import { AppBar, Drawer, List, ListItem, Toolbar, Typography, IconButton, useMediaQuery } from "@mui/material"
-import { ContactCardGrid, ContactDataGrid, ContactForm, ContactTable, minWidth } from '../';
+import { ContactCardGrid, ContactDataGrid, ContactForm, ContactTable } from '../';
 import { useTheme, Theme, ThemeProvider } from '@mui/material/styles';
 import { MyTheme } from '../../Theme/MyTheme';
 import MenuIcon from '@mui/icons-material/Menu';

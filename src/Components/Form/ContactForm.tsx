@@ -1,27 +1,27 @@
 import { useState } from "react";
-import { FormControl, FormGroup, Paper, Stack, Button, SelectChangeEvent, Dialog, Alert, AlertTitle,
-         TextField, MenuItem, Checkbox, ListItemText } from "@mui/material";
+import { Paper, Stack, Button, SelectChangeEvent, Dialog, Alert, AlertTitle,
+         MenuItem, Checkbox, ListItemText } from "@mui/material";
 import { contactData, FormValues } from '../../Data/ContactData';
 import { FormAutoComplete, FormSelect, FormTextField, FormRadios, FormDesktopDatePicker, StyledFormGroup } from './FormSubcomponents';
 import { useTheme } from '@mui/material/styles';
+import dayjs from 'dayjs';
 
 export const minWidth = 300;
 export const defaultPreference = 'Home Office';
 
 const skills = ['React', 'Angular', 'Python', 'NodeJS', 'MongoDB'];
-const today = new Date();
+//const today = new Date();
 
 const formDefaultValues = {
     id: contactData.length + 1,
     name: '',
     role: 'Software Dev',
     skills: ['React'],
-    startDate: `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`,
+    // startDate: `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`,
+    startDate: '',
     preference: defaultPreference,
  //   moreInfo: ''
 };
-
-
 
 const paperInputsStyle = {  // Defino un estilo comun a todos los inputs del formulario
   '& .MuiOutlinedInput-root': { // apunto a esta clase (.) anidada que tienen los 4 inputs
@@ -36,6 +36,10 @@ const paperInputsStyle = {  // Defino un estilo comun a todos los inputs del for
     color: 'primary.dark'
   }
 }
+
+console.log(formDefaultValues.startDate)
+
+//console.log(dayjs( `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`))
 
 export const ContactForm = () => {
 
@@ -140,6 +144,7 @@ export const ContactForm = () => {
 
             <FormDesktopDatePicker
                 value={ formValues.startDate }
+               // value={ '' }
                 onChange={ handleDatePickerChange }
             /> 
           </StyledFormGroup>
@@ -222,6 +227,6 @@ export const ContactForm = () => {
       checked
 
   (5) Solo lo puse a efecto de mostrar como se pone un TextField multilinea. Lo comenté para que no 
-      salga el table y Grid que me modifica el estilo por no estar considerado este campo. También
+      salga en table y Grid que me modifica el estilo por no estar considerado este campo. También
       lo eliminé de ContactData.
   */

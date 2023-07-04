@@ -1,7 +1,7 @@
 import { DataGrid, GridRenderCellParams, GridToolbar } from "@mui/x-data-grid";
 import { useTheme, Theme } from '@mui/material/styles';
 import { contactData } from '../../Data/ContactData';
-import { Box, Button, Toolbar } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
 const datagridSx = { // (3)
   '& .MuiDataGrid-columnHeaders': { // Para darle estilo al header
