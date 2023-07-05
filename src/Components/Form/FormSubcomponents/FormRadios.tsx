@@ -12,7 +12,7 @@ export const FormRadios = (
     {/* <FormControl disabled> (1) */}
         <FormGroup sx={{ minWidth: minWidth, marginRight: 2, marginBottom: {xs: 2, md: 0}}}> 
             <FormLabel component='legend'>
-                Preferencia de Trabajar
+                Work Preference
             </FormLabel>
             <RadioGroup 
                 aria-label='preference'
@@ -27,17 +27,17 @@ export const FormRadios = (
                     value= { defaultPreference }
                 />
                 <FormControlLabel
-                    label='Hibrido'
+                    label='Hybrid'
                     control={<Radio />}
-                    value='Hibrido'
+                    value='Hybrid'
                 />
                 <FormControlLabel
-                    label='En la Oficina'
+                    label='Office'
                     control={<Radio />}
-                    value='En la Oficina'
+                    value='Office'
                 />
             </RadioGroup>
-            <FormHelperText>Helper Text</FormHelperText>
+            <FormHelperText>Helper Text example</FormHelperText>
         </FormGroup>
     </FormControl>
   )

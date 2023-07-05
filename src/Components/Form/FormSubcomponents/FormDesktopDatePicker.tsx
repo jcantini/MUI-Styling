@@ -14,7 +14,7 @@ export const FormDesktopDatePicker = (
         <LocalizationProvider dateAdapter={ AdapterDayjs}>
             <DesktopDatePicker 
                 {...props}
-                label='Fecha'
+                label='Date'
                 format='DD/MM/YYYY'
                 views={['day']} // (1)
                 slots={{ openPickerIcon: CalendarMonthIcon }}

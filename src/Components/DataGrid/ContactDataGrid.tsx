@@ -63,7 +63,7 @@ const columns = ( theme: Theme ) => ([
   },
   {
     field: 'preference',
-    headerName: 'workPreference',
+    headerName: 'Work Pref.',
     minWidth: 150,
     renderCell: (cellValues: GridRenderCellParams<any>) => {
       return ( cellValues.value ) // El return indica lo que voy a renderizar el la celda. Si es algo 

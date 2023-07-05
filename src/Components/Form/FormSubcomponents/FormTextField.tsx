@@ -8,7 +8,7 @@ export const FormTextField = (props: TextFieldProps) => {
       {...props}
       id='name'
       name='name'
-      label='Nombre'
+      label='Name'
       variant='outlined'
       sx={{ 
         minWidth: minWidth, 

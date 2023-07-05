@@ -151,8 +151,8 @@ export const ContactForm = () => {
           <StyledFormGroup row >
             <FormRadios preference={formValues.preference} handleRadioChange={handleRadioChange} />
             <Stack direction='column' justifyContent='space-around' alignItems='center' sx={{minWidth: minWidth}}>
-                <Button variant="contained" sx={{ height: 40, width: 100 }} onClick={ handleSubmit } >Guardar</Button>
-                <Button variant="beautiful" sx={{ height: 40, width: 100 }} onClick={ handleClearClick }>Limpiar</Button>       
+                <Button variant="contained" sx={{ height: 40, width: 100 }} onClick={ handleSubmit } >Save</Button>
+                <Button variant="beautiful" sx={{ height: 40, width: 100 }} onClick={ handleClearClick }>Clean</Button>       
               </Stack>
           </StyledFormGroup>
           {/* <FormGroup row >    (5)
@@ -174,9 +174,9 @@ export const ContactForm = () => {
     <Dialog open={ alertOpen } onClose={ handleAlertClick }>
       <Alert>
         <AlertTitle>
-          Success!
+          Success!!!
         </AlertTitle>
-        Formulario Guardado - Ver Resultado el la consola
+        Form saved - Ver Results at the console
       </Alert>
     </Dialog>
     </>
