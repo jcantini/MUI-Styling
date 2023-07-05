@@ -1,7 +1,8 @@
 import { DataGrid, GridRenderCellParams, GridToolbar } from "@mui/x-data-grid";
 import { useTheme, Theme } from '@mui/material/styles';
 import { contactData } from '../../Data/ContactData';
-import { Box, Button } from '@mui/material';
+import { Box, Button } from '@mui/material'; 
+import Swal from 'sweetalert2';
 
 const datagridSx = { // (3)
   '& .MuiDataGrid-columnHeaders': { // Para darle estilo al header
@@ -87,7 +88,14 @@ const columns = ( theme: Theme ) => ([
 ]);
 
 const handlePrintClick = ( cellValues: GridRenderCellParams ) => {
-  console.log( cellValues );
+  console.log( cellValues.row );
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: `Nombre: ${cellValues.row.name}. \n Los datos completos se muestran en consola`,
+    showConfirmButton: false,
+    timer: 1800
+  })
 }
 
 export const ContactDataGrid = () => {

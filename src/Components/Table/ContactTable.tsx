@@ -1,5 +1,6 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { contactData } from '../../Data/ContactData';
+import Swal from 'sweetalert2';
 
 const borderColor = {
   borderBottomColor: 'primary.main'
@@ -34,10 +35,17 @@ export const ContactTable = () => {
                         return (
                           <TableCell 
                             key={contact.id+key} 
-                            sx={{ ...borderColor, backgroundColor: 'lightgrey' }}
+                            sx={{ ...borderColor, backgroundColor: 'lightgrey', textDecoration: 'underline', cursor: 'pointer' }}
                             onClick={ 
                               ( event: React.MouseEvent<HTMLElement>) => { // (3)
                                 console.log((event.target as Element).innerHTML);
+                                Swal.fire({
+                                  position: 'top-end',
+                                  icon: 'success',
+                                  title: `Nombre: ${(event.target as Element).innerHTML}`,
+                                  showConfirmButton: false,
+                                  timer: 1800
+                                })
                               }
                             }
                           >{value}</TableCell>

@@ -4,7 +4,6 @@ import { Paper, Stack, Button, SelectChangeEvent, Dialog, Alert, AlertTitle,
 import { contactData, FormValues } from '../../Data/ContactData';
 import { FormAutoComplete, FormSelect, FormTextField, FormRadios, FormDesktopDatePicker, StyledFormGroup } from './FormSubcomponents';
 import { useTheme } from '@mui/material/styles';
-import dayjs from 'dayjs';
 
 export const minWidth = 300;
 export const defaultPreference = 'Home Office';
@@ -177,7 +176,7 @@ export const ContactForm = () => {
         <AlertTitle>
           Success!
         </AlertTitle>
-        Formulario Guardado
+        Formulario Guardado - Ver Resultado el la consola
       </Alert>
     </Dialog>
     </>
