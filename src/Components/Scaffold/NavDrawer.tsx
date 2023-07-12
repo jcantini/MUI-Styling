@@ -30,7 +30,7 @@ const themedStyles = ( theme: Theme, responsiveDrawerWidth: number | string ) =>
         content: {
             marginLeft: 0, 
             padding: 3,
-            maxWidth: 720,
+            maxWidth: 820,
             minWidth: 375, // Para que el area gris de fondo no se mueva hasta que este activado contentShift
             transition: theme.transitions.create('margin', {
                 easing: theme.transitions.easing.easeOut,
