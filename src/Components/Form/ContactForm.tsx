@@ -36,7 +36,6 @@ const paperInputsStyle = {  // Defino un estilo comun a todos los inputs del for
   }
 }
 
-console.log(formDefaultValues.startDate)
 
 //console.log(dayjs( `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`))
 
@@ -71,9 +70,11 @@ export const ContactForm = () => {
  
   const handleDatePickerChange = ( value: string | null| undefined ) => {
     const startDate = value as unknown as { month: () => string, date: () => string, year: () => string };
+    const startDate2 = `${startDate.date()}/${startDate.month()+1}/${startDate.year()}`
+    
     setFormValues ({
-      ...formValues,
-      startDate: `${startDate.date()}/${startDate.month()+1}/${startDate.year()}`
+       ...formValues,
+       startDate: startDate2
     })
   }
 
@@ -88,7 +89,7 @@ export const ContactForm = () => {
   const handleSubmit = () => {
     contactData.push( formValues );
     setAlertOpen( true )
-    console.log(contactData);
+    console.log(formValues);
     clearValues();
   }
 
