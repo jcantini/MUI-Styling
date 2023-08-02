@@ -9,7 +9,6 @@ export const minWidth = 300;
 export const defaultPreference = 'Home Office';
 
 const skills = ['React', 'Angular', 'Python', 'NodeJS', 'MongoDB'];
-//const today = new Date();
 
 const formDefaultValues = {
     id: contactData.length + 1,
@@ -19,7 +18,6 @@ const formDefaultValues = {
     // startDate: `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`,
     startDate: '',
     preference: defaultPreference,
- //   moreInfo: ''
 };
 
 const paperInputsStyle = {  // Defino un estilo comun a todos los inputs del formulario
@@ -35,9 +33,6 @@ const paperInputsStyle = {  // Defino un estilo comun a todos los inputs del for
     color: 'primary.dark'
   }
 }
-
-
-//console.log(dayjs( `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`))
 
 export const ContactForm = () => {
 
