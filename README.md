@@ -1,9 +1,7 @@
 ## MUI use of Components and Styling 
 
 The project was created using Yarn - Vite.  
-It's deployed in Railway and can be access from:  
-
-[MuiStyling-app](https://jcantini.github.io/MUI-Styling/)  MuiStyling app
+It's deployed in Railway and can be access from the link on the right.  
 
 
 Stack used to develope this SPA app:  
